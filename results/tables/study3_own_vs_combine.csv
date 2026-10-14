@@ -1,0 +1,3 @@
+System,Test,Combine,Own_only,Diff,CI_low,CI_high,Holm_p_per_seed,seeds_sig_of_3,Verdict
+BanglaBERT + normalizer,test_own,0.9387,0.954,0.0153,0.0074,0.0234,"4.28e-05, 0.00395, 0.0119",3,significant
+E6,test_own,0.943,0.9575,0.0146,0.0074,0.0221,"0.000461, 0.00395, 0.00135",3,significant

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code or the released predictions, please cite the thesis."
+title: "Bangla Hate Speech Detection with Transformer Ensembles: Single-Corpus, Merged-Corpus and Own-Dataset Studies"
+type: software
+authors:
+  - family-names: Mohammed
+    given-names: Abdullah
+  - family-names: Shurov
+    given-names: Rayhan Ahmed
+date-released: 2026-10-14
+repository-code: "https://github.com/abdullah-mohammed0000/bangla-hate-speech-ensembles"
+license: MIT
+keywords: [Bangla, hate speech detection, BanglaBERT, ensemble, merged-corpus training]

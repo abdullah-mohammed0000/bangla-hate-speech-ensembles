@@ -1,0 +1,11 @@
+System,Macro-F1 (mean ± std)
+TF-IDF char + SVM,0.9066 ± 0.0000
+BiLSTM,0.8686 ± 0.0053
+mBERT,0.9033 ± 0.0027
+IndicBERTv2,0.9180 ± 0.0015
+XLM-RoBERTa,0.9145 ± 0.0010
+BanglaBERT,0.9086 ± 0.0021
+BanglaBERT + normalizer,0.9236 ± 0.0014
+BanglaBERT-large + normalizer,0.9250 ± 0.0009
+E2: BB-norm + XLM-R,0.9250 ± 0.0011
+E6: BB-large-norm + BB-norm + XLM-R,0.9283 ± 0.0011

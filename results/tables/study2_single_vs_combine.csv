@@ -1,0 +1,31 @@
+System,Test,Single,Combine,Diff,CI_low,CI_high,Holm_p_per_seed,seeds_sig_of_3,Verdict
+TF-IDF char + SVM,test_bdshs,0.9066,0.8789,-0.0277,-0.0356,-0.0197,"7.1e-11, 7.1e-11, 1.06e-10",3,significant
+BiLSTM,test_bdshs,0.8695,0.8443,-0.0252,-0.0321,-0.0179,"1.58e-06, 9.34e-07, 1.05e-06",3,significant
+mBERT,test_bdshs,0.9027,0.8702,-0.0325,-0.039,-0.0261,"6.97e-15, 6.53e-19, 2.81e-09",3,significant
+IndicBERTv2,test_bdshs,0.9185,0.8833,-0.0352,-0.0415,-0.0292,"1.47e-20, 9.09e-22, 5.12e-13",3,significant
+XLM-RoBERTa,test_bdshs,0.9143,0.8756,-0.0388,-0.0451,-0.0322,"2.62e-19, 5.19e-19, 7.28e-23",3,significant
+BanglaBERT,test_bdshs,0.9079,0.872,-0.0359,-0.0424,-0.0293,"1.47e-20, 5.92e-18, 1.56e-15",3,significant
+BanglaBERT + normalizer,test_bdshs,0.9237,0.8837,-0.04,-0.0462,-0.0337,"7.5e-25, 6.99e-23, 2.13e-23",3,significant
+BanglaBERT-large + normalizer,test_bdshs,0.925,0.884,-0.041,-0.0474,-0.0347,"4.52e-28, 1.21e-24, 2.72e-21",3,significant
+E2: BB-norm + XLM-R,test_bdshs,0.9257,0.8912,-0.0345,-0.0407,-0.0281,"1.71e-18, 1.08e-19, 1.05e-18",3,significant
+E6: BB-large-norm + BB-norm + XLM-R,test_bdshs,0.9285,0.8901,-0.0383,-0.0446,-0.032,"5.11e-27, 2.59e-21, 2.38e-22",3,significant
+TF-IDF char + SVM,test_all,0.7548,0.8558,0.1011,0.0939,0.1086,"1.05e-122, 9.29e-123, 8.13e-123",3,significant
+BiLSTM,test_all,0.7378,0.8276,0.0898,0.0835,0.0963,"5.2e-95, 9.75e-81, 1.91e-78",3,significant
+mBERT,test_all,0.7703,0.8608,0.0905,0.0839,0.0971,"8.75e-113, 5.51e-101, 1.73e-106",3,significant
+IndicBERTv2,test_all,0.7842,0.8787,0.0944,0.088,0.1015,"5.47e-107, 2.26e-127, 1.57e-129",3,significant
+XLM-RoBERTa,test_all,0.7769,0.868,0.0911,0.0846,0.0978,"6.57e-112, 4.87e-107, 1.29e-102",3,significant
+BanglaBERT,test_all,0.7855,0.8745,0.0889,0.0821,0.0958,"3.89e-106, 7.14e-109, 6.85e-105",3,significant
+BanglaBERT + normalizer,test_all,0.7931,0.8802,0.0871,0.0804,0.0942,"1.16e-104, 2.8e-99, 3.61e-105",3,significant
+BanglaBERT-large + normalizer,test_all,0.7952,0.882,0.0868,0.0802,0.0936,"1.29e-98, 3.47e-97, 2.13e-116",3,significant
+E2: BB-norm + XLM-R,test_all,0.7862,0.8845,0.0982,0.0915,0.1051,"1.26e-129, 2.17e-126, 2.15e-130",3,significant
+E6: BB-large-norm + BB-norm + XLM-R,test_all,0.7922,0.886,0.0939,0.0873,0.1008,"8.43e-121, 3.54e-115, 1.78e-124",3,significant
+TF-IDF char + SVM,test_own,0.6619,0.8941,0.2322,0.2142,0.2502,"1.43e-97, 1.43e-97, 1.43e-97",3,significant
+BiLSTM,test_own,0.6716,0.871,0.1994,0.1851,0.214,"8.14e-75, 1.63e-70, 2.06e-76",3,significant
+mBERT,test_own,0.7048,0.9143,0.2095,0.1938,0.2259,"2.27e-92, 2.96e-88, 1.83e-90",3,significant
+IndicBERTv2,test_own,0.7315,0.9272,0.1957,0.1795,0.2116,"5.09e-85, 5.55e-92, 1.26e-85",3,significant
+XLM-RoBERTa,test_own,0.7141,0.9241,0.21,0.1939,0.226,"1.27e-93, 1.2e-90, 1.04e-92",3,significant
+BanglaBERT,test_own,0.7478,0.9369,0.1891,0.173,0.2046,"8.74e-87, 2.26e-80, 2.8e-82",3,significant
+BanglaBERT + normalizer,test_own,0.7483,0.9387,0.1904,0.1744,0.206,"7.63e-83, 2.26e-80, 1.27e-86",3,significant
+BanglaBERT-large + normalizer,test_own,0.7494,0.9422,0.1928,0.177,0.2092,"1.81e-84, 4.03e-80, 1.55e-91",3,significant
+E2: BB-norm + XLM-R,test_own,0.7292,0.9399,0.2107,0.194,0.2277,"4.76e-96, 4.13e-93, 1.05e-95",3,significant
+E6: BB-large-norm + BB-norm + XLM-R,test_own,0.741,0.943,0.202,0.1857,0.2193,"3.14e-92, 2.85e-86, 1.43e-94",3,significant

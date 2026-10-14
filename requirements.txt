@@ -1,0 +1,7 @@
+# analysis, data preparation, classical baselines (CPU)
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.4
+openpyxl>=3.1
+pytest>=8

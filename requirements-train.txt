@@ -1,0 +1,8 @@
+# transformer fine-tuning (GPU). Colab already ships torch; versions used for the thesis in brackets.
+torch            # 2.11.0+cu130
+transformers     # 5.18.0
+datasets         # 4.8.5
+accelerate       # 1.15.0
+sentencepiece    # 0.2.2
+ftfy
+regex

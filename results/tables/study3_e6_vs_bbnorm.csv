@@ -1,0 +1,2 @@
+Comparison,Diff,CI_low,CI_high,McNemar_p_per_seed,seeds_sig_of_3,Verdict
+E6 - BanglaBERT + normalizer (own-only),0.0035,-0.0001,0.007,"0.44, 0.185, 0.105",0,not significant
