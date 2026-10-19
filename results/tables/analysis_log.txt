@@ -1,16 +1,16 @@
 
-=== Study 1: trained and tested on BD-SHS (test 5,029) ===
-                             System Macro-F1 (mean ± std)
-                  TF-IDF char + SVM       0.9066 ± 0.0000
-                             BiLSTM       0.8686 ± 0.0053
-                              mBERT       0.9033 ± 0.0027
-                        IndicBERTv2       0.9180 ± 0.0015
-                        XLM-RoBERTa       0.9145 ± 0.0010
-                         BanglaBERT       0.9086 ± 0.0021
-            BanglaBERT + normalizer       0.9236 ± 0.0014
-      BanglaBERT-large + normalizer       0.9250 ± 0.0009
-                E2: BB-norm + XLM-R       0.9250 ± 0.0011
-E6: BB-large-norm + BB-norm + XLM-R       0.9283 ± 0.0011
+=== Study 1: trained and tested on BD-SHS (test 5,029; regime S = original runs, A = new runs) ===
+                             System Regime Macro-F1 (mean ± std)
+                  TF-IDF char + SVM      S       0.9066 ± 0.0000
+                             BiLSTM      S       0.8686 ± 0.0053
+                              mBERT      S       0.9033 ± 0.0027
+                        IndicBERTv2      S       0.9180 ± 0.0015
+                        XLM-RoBERTa      S       0.9145 ± 0.0010
+                         BanglaBERT      S       0.9086 ± 0.0021
+            BanglaBERT + normalizer      S       0.9236 ± 0.0014
+      BanglaBERT-large + normalizer      S       0.9250 ± 0.0009
+                E2: BB-norm + XLM-R      S       0.9250 ± 0.0011
+E6: BB-large-norm + BB-norm + XLM-R      S       0.9283 ± 0.0011
 
 === Study 2, trained on BD-SHS only (Single) ===
                                          BD-SHS test      Merged test Own-dataset test
@@ -72,6 +72,15 @@ test_bdshs E6: BB-large-norm + BB-norm + XLM-R  0.9285   0.8901 -0.0383 -0.0446 
   test_own       BanglaBERT-large + normalizer  0.7494   0.9422  0.1928  0.1770   0.2092               3 significant
   test_own                 E2: BB-norm + XLM-R  0.7292   0.9399  0.2107  0.1940   0.2277               3 significant
   test_own E6: BB-large-norm + BB-norm + XLM-R  0.7410   0.9430  0.2020  0.1857   0.2193               3 significant
+
+=== Size-matched control (mBERT): C - A = size alone, B - C = merged data beyond size ===
+Comparison       Test  First  Second    Diff  CI_low  CI_high                 Holm_p_per_seed  seeds_sig_of_3     Verdict
+     C - A test_bdshs 0.9027  0.8972 -0.0055 -0.0094  -0.0019           0.279, 0.00185, 0.533               1       mixed
+     B - C test_bdshs 0.8972  0.8702 -0.0270 -0.0336  -0.0205      4.9e-11, 3.95e-10, 4.5e-08               3 significant
+     B - A test_bdshs 0.9027  0.8702 -0.0325 -0.0390  -0.0261     2.32e-15, 1.63e-19, 1.4e-09               3 significant
+     C - A   test_all 0.7703  0.7669 -0.0033 -0.0060  -0.0007           0.483, 0.00476, 0.508               1       mixed
+     B - C   test_all 0.7669  0.8608  0.0938  0.0871   0.1004 2.27e-113, 1.52e-113, 1.23e-108               3 significant
+     B - A   test_all 0.7703  0.8608  0.0905  0.0839   0.0971 1.25e-113, 1.38e-101, 3.46e-107               3 significant
 
 === Study 3: own-only, own test set ===
                              System        Accuracy        Macro_F1     Weighted_F1          Hate_P          Hate_R         Hate_F1

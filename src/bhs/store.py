@@ -52,3 +52,12 @@ def save_probs(root, model, regime, seed, test, probs) -> None:
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
     np.save(root / f"probs_{model}_{regime}_s{seed}_{test}.npy", np.asarray(probs, dtype=np.float32))
+
+
+def save_labels(root, D: dict) -> None:
+    """Write labels_<test>.npy for every test set in D, so that a prediction folder can be analysed on its own."""
+    root = Path(root)
+    root.mkdir(parents=True, exist_ok=True)
+    for t in C.TEST_SETS:
+        if t in D:
+            np.save(root / f"labels_{t}.npy", D[t].label.values.astype(np.int64))

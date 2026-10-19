@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from bhs import config as C  # noqa: E402
 from bhs.classical import run_bilstm, run_svm  # noqa: E402
 from bhs.data import load_splits  # noqa: E402
-from bhs.store import Store  # noqa: E402
+from bhs.store import Store, save_labels  # noqa: E402
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -25,6 +25,7 @@ if __name__ == "__main__":
     a = ap.parse_args()
     D, store, out = load_splits(a.splits), Store(a.out), Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
+    save_labels(out, D)
     log = out / "results_classical.csv"
     for r in a.regime:
         for m in a.model:

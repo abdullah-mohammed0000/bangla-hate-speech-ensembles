@@ -37,7 +37,7 @@ git clone https://github.com/abdullah-mohammed0000/bangla-hate-speech-ensembles.
 pip install -r requirements.txt
 unzip -q results/predictions.zip -d results/          # -> results/predictions/
 python scripts/verify_release.py                      # ALL REPRODUCED = 13 headline checks against the thesis
-python scripts/analyze.py                             # Study 1/2/3 tables + significance tests -> results/tables/
+python scripts/analyze.py --predictions results/predictions   # Study 1/2/3 tables, size control, significance tests -> results/tables/
 ```
 
 ## Quick start 2 - retrain everything (Google Colab, T4 GPU)

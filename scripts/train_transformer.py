@@ -16,7 +16,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from bhs import config as C  # noqa: E402
 from bhs.data import load_bdshs, load_splits  # noqa: E402
-from bhs.store import Store  # noqa: E402
+from bhs.store import Store, save_labels  # noqa: E402
 from bhs.transformer import run_transformer  # noqa: E402
 
 if __name__ == "__main__":
@@ -35,6 +35,7 @@ if __name__ == "__main__":
     else:
         D, tests = load_splits(a.splits), None
     store, out = Store(a.out), Path(a.out)
+    save_labels(out, D)
     for m in a.model:
         for r in a.regime:
             for s in a.seed:
