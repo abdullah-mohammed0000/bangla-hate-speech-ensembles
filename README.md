@@ -65,7 +65,7 @@ Study 1 only needs the public BD-SHS files: `python scripts/train_transformer.py
 | BD-SHS (Romim et al.) | Studies 1-3 | original authors (see `data/README.md`) |
 | BanglaHateBERT data (Jahan et al.) | merged corpus | original authors |
 | BanHate | merged corpus | original authors |
-| **Own dataset** (26,363 Facebook/YouTube comments, collected Aug-Oct 2026) | Studies 2-3 | **not public** (privacy); available from the authors on request |
+| **Own dataset** (26,363 Facebook/YouTube comments collected, Aug-Oct 2026; 26,357 released) | Studies 2-3 | **public**: https://doi.org/10.5281/zenodo.24101402 (CC BY-NC 4.0) |
 
 `prepare_data.py` rebuilds the merged splits from the raw corpora and checks the SHA-256 of every output file
 against the files used in the thesis (`src/bhs/config.py`). Without the own dataset you can still run Study 1 and
@@ -95,4 +95,4 @@ See `CITATION.cff`.
 
 ## License
 
-Code: MIT (see `LICENSE`). The corpora keep the licences of their original authors; the own dataset is not released.
+Code: MIT (see `LICENSE`). The corpora keep the licences of their original authors; the own dataset is released on Zenodo (https://doi.org/10.5281/zenodo.24101402) under CC BY-NC 4.0.
