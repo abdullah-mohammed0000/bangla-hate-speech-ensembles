@@ -11,3 +11,15 @@ date-released: 2026-10-14
 repository-code: "https://github.com/abdullah-mohammed0000/bangla-hate-speech-ensembles"
 license: MIT
 keywords: [Bangla, hate speech detection, BanglaBERT, ensemble, merged-corpus training]
+references:
+  - type: dataset
+    title: "Bangla Hate Speech Comments (26K): A Binary Hate Speech Dataset of Facebook and YouTube Comments"
+    authors:
+      - family-names: Mohammed
+        given-names: Abdullah
+      - family-names: Shurov
+        given-names: Rayhan Ahmed
+    year: 2026
+    doi: 10.5281/zenodo.24101402
+    publisher:
+      name: Zenodo
